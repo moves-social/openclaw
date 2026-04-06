@@ -40,6 +40,7 @@ Docs: https://docs.openclaw.ai
 - Docs/IRC: replace public IRC hostname examples with `irc.example.com` and recommend private servers for bot coordination while listing common public networks for intentional use.
 - Memory/dreaming: write dreaming trail content to top-level `DREAMS.md` instead of daily memory notes, update `/dreaming` help text to point there, and keep `DREAMS.md` available for explicit reads without pulling it into default recall. Thanks @davemorin.
 - Plugins/Lobster: run bundled Lobster workflows in process instead of spawning the external CLI, reducing transport overhead and unblocking native runtime integration. (#61523) Thanks @mbelinky.
+- Plugins/Lobster: harden managed resume validation so invalid TaskFlow resume calls fail earlier, and memoize embedded runtime loading per runner while keeping failed loads retryable. (#61566) Thanks @mbelinky.
 
 ### Fixes
 
